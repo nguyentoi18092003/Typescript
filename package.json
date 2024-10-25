@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "@types/jasmine": "^5.1.4",
+    "@types/jasminewd2": "^2.0.13",
+    "@types/node": "^22.8.0"
+  }
+}
