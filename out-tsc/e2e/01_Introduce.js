@@ -1,4 +1,4 @@
-var addres = 'Ho Chi Minh';
+let addres = 'Ho Chi Minh';
 console.log(showAddress(addres));
 console.log("1");
 console.log("2");

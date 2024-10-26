@@ -1,5 +1,5 @@
 // if - else - if
-var browserName = "firefox";
+let browserName = "firefox";
 if (browserName === "firefox") {
     console.log("Start Firefox browser");
 }
@@ -16,9 +16,9 @@ else {
     console.log("Please input your browser!");
 }
 // conditional operator
-var x = 10, y = 20;
+let x = 10, y = 20;
 x > y ? console.log('x is greater than y.') : console.log('x is less than y.');
-var day = 4;
+let day = 4;
 switch (day) {
     case 0:
         console.log("It is a Sunday.");

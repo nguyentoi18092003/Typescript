@@ -1,5 +1,5 @@
-var a = 15;
-var b = 20;
+let a = 15;
+let b = 20;
 console.log(a + b);
 console.log(a - b);
 console.log(a * b);
@@ -13,19 +13,19 @@ console.log(++b);
 //Logic AND,OR,NOT
 //Condition: 
 //Toan tu 3 ngoi
-var num = 16;
-var result = (num > 0) ? "True" : "False";
+let num = 16;
+let result = (num > 0) ? "True" : "False";
 console.log(result);
 //Type: in,typeof,instanceof
-var Bike = { make: 'Honda', model: 'CLIQ', year: 2018 };
+let Bike = { make: 'Honda', model: 'CLIQ', year: 2018 };
 console.log('make' in Bike); //Ktra xem make co nam trong Bike khong
 // Output:
 // true
-var message = "Welcome to " + "Typescript";
+let message = "Welcome to " + "Typescript";
 console.log(typeof message); //Kien tra kieu du lieu
 // Output:
 // String
-var arr = [1, 2, 3];
+let arr = [1, 2, 3];
 console.log(arr instanceof Array); // true
 console.log(arr instanceof String); // false
 //Assignment: =,+=,-=,*=,/=,%=

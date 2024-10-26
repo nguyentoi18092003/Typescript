@@ -1,45 +1,30 @@
 //TypeScript Types: gồm built-in Type, User-Defined Type
 // Built-in Type: Number, Void, String, Null, Boolean
 // User-Defined Type
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 //Number: Khai bao so
-var first = 150;
-var second = 33.99;
+let first = 150;
+let second = 33.99;
 console.log(first);
 console.log(second);
 //String 
-var firstName = 'Auto';
-var lastName = "Testing"; // doi voi string thi dau nhay don hay keps deu duoc
-var lanuage = "Po";
+let firstName = 'Auto';
+let lastName = "Testing"; // doi voi string thi dau nhay don hay keps deu duoc
+let lanuage = `Po`;
 console.log('Get firstName: ' + firstName);
 console.log(lastName);
-console.log("Get langague: ".concat(lanuage)); // cai hay cua dau ``
+console.log(`Get langague: ${lanuage}`); // cai hay cua dau ``
 //Boolean
-var aliveStatus = true;
+let aliveStatus = true;
 console.log(aliveStatus);
 //Void (undified hoac null)
-var version = null;
-var version1;
+let version = null;
+let version1;
 function showAliveStatus() {
     console.log("Day la ham tra ve kieu void");
 }
 showAliveStatus();
 //Any: đại diện cho tất cả các kiểu dữ liệu thuộc kiểu built-in
-var phoneNumber = '932742984';
+let phoneNumber = '932742984';
 phoneNumber = true;
 phoneNumber = 2342423423;
 phoneNumber = null;
@@ -59,8 +44,7 @@ for (var number in names) {
     console.log('Get index: ' + number);
 }
 // Lay ra gia trị
-for (var _i = 0, names_1 = names; _i < names_1.length; _i++) {
-    var number = names_1[_i];
+for (var number of names) {
     console.log('Get value: ' + number);
 }
 var list = [1, 3, 5];
@@ -68,15 +52,14 @@ console.log(list);
 //TUPLE
 //Tuple khác ở chỗ có thể chứa nhiều loại dataType
 //Vi dụ 1:
-var phone;
+let phone;
 phone = ['a', 234];
 //hoăc 
-var phone1 = ['a', 234];
+let phone1 = ['a', 234];
 // Ví dụ 2:
 var user;
 user = [1, 'a', true, 1, 'h'];
-for (var _a = 0, user_1 = user; _a < user_1.length; _a++) {
-    var value = user_1[_a];
+for (var value of user) {
     console.log(value);
 }
 ;
@@ -111,55 +94,49 @@ function getMedia(mediaName) {
         return PrintMedia.Magazine;
     }
 }
-var mediaType = getMedia('Forbes');
-var Calculator = {
-    subtract: function (first, second) {
+let mediaType = getMedia('Forbes');
+let Calculator = {
+    subtract(first, second) {
         return first - second;
     }
 };
-var Employee = /** @class */ (function () {
-    function Employee(code, name) {
+class Employee {
+    constructor(code, name) {
         this.empCode = code;
         this.name = name;
     }
-    Employee.prototype.getSalary = function (empCode) {
+    getSalary(empCode) {
         return 20000;
-    };
-    return Employee;
-}());
+    }
+}
 //Class
-var Student = /** @class */ (function () {
-    function Student(_rollNo, _name) {
+class Student {
+    constructor(_rollNo, _name) {
         this.rollNo = _rollNo;
         this.name = _name;
     }
-    Student.prototype.showDetails = function () {
+    showDetails() {
         console.log(this.rollNo + ":" + this.name);
-    };
-    return Student;
-}());
+    }
+}
 // Inheritance
-var Person = /** @class */ (function () {
-    function Person(name) {
+class Person {
+    constructor(name) {
         this.name = name;
     }
-    return Person;
-}());
-var Employee1 = /** @class */ (function (_super) {
-    __extends(Employee1, _super);
-    function Employee1(empcode, name) {
-        var _this = _super.call(this, name) || this;
-        _this.empCode = empcode;
-        return _this;
+}
+class Employee1 extends Person {
+    constructor(empcode, name) {
+        super(name);
+        this.empCode = empcode;
     }
-    Employee1.prototype.displayName = function () {
+    displayName() {
         console.log("Name = " + this.name + ", Employee Code = " + this.empCode);
-    };
-    return Employee1;
-}(Person));
-var bill = new Employee1(100, "Bill");
+    }
+}
+let bill = new Employee1(100, "Bill");
 bill.displayName(); // Name = Bill, Employee Code = 100
-var dam = new Employee1(200, "Dam Dao");
+let dam = new Employee1(200, "Dam Dao");
 dam.displayName(); // Name = Dam Dao, Employee Code = 200
 //Fuction
 //# sourceMappingURL=03_DataType.js.map
