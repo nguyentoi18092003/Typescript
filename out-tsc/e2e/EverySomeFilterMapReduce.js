@@ -15,9 +15,20 @@ console.log(yearAll);
 console.log(listNumber.filter(checkAge)); // No se loc ra cac phan tu thoa man ham checkAge
 //Output: [ 19, 20, 25, 45 ]
 //MAP
-var employeeSalary = [100, 200, 300, 400];
+var employeeSalary = [1000, 1200, 800, 1500];
 function applyBonus(sal) {
     return sal * 2;
 }
-console.log(employeeSalary.map(applyBonus));
+console.log(employeeSalary.map(applyBonus)); //No se ap dung tat ca phan tu cho mang kia,(no se tinh toan theo cai ham mk add vao) va tra ve magn moi
+//OUTPUT [ 200, 400, 600, 800 ]
+//Vi du bai toan thuc te
+//Salary: <=800$-10%
+//Salary: >=200$-12%
+//Salary: >=300-15%
+//REDUCE: tinh tong
+let salarySum = 0;
+salarySum = employeeSalary.reduce((sum, sal) => {
+    return sum += sal;
+}, 0); // Ơ day sum duoc gan bang 0 tu dau
+console.log(salarySum);
 //# sourceMappingURL=EverySomeFilterMapReduce.js.map
